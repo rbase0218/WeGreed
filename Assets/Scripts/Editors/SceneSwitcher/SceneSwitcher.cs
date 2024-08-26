@@ -22,26 +22,26 @@ namespace UnityToolbarExtender.Examples
 		}
 	}
 
-	[InitializeOnLoad]
-	public class SceneSwitchLeftButton
-	{
-		static SceneSwitchLeftButton()
-		{
-			ToolbarExtender.LeftToolbarGUI.Add(OnToolbarGUI);
-		}
-
-		static void OnToolbarGUI()
-		{
-			GUILayout.FlexibleSpace();
-
-			if(GUILayout.Button(new GUIContent("Start Game", "첫 씬부터 게임을 시작합니다."), ToolbarStyles.commandButtonStyle))
-			{
-				// GUID로 변경해야 함.
-				var startSceneData = AssetDatabase.FindAssets("Init", null);
-				SceneHelper.StartScene(startSceneData[0]);
-			}
-		}
-	}
+	// [InitializeOnLoad]
+	// public class SceneSwitchLeftButton
+	// {
+	// 	static SceneSwitchLeftButton()
+	// 	{
+	// 		ToolbarExtender.LeftToolbarGUI.Add(OnToolbarGUI);
+	// 	}
+	//
+	// 	static void OnToolbarGUI()
+	// 	{
+	// 		GUILayout.FlexibleSpace();
+	//
+	// 		if(GUILayout.Button(new GUIContent("Start Game", "첫 씬부터 게임을 시작합니다."), ToolbarStyles.commandButtonStyle))
+	// 		{
+	// 			// GUID로 변경해야 함.
+	// 			var startSceneData = AssetDatabase.FindAssets("Init", null);
+	// 			SceneHelper.StartScene(startSceneData[0]);
+	// 		}
+	// 	}
+	// }
 
 	[InitializeOnLoad]
 	public class SceneSwitchRightButton
@@ -59,12 +59,12 @@ namespace UnityToolbarExtender.Examples
 			{
 				genericMenu = new GenericMenu();
 				
-				string[] guids = AssetDatabase.FindAssets("t:scene", new[] { "Assets/02. Scene/DevScene"});
+				string[] guids = AssetDatabase.FindAssets("t:scene", new[] { "Assets/Scenes"});
 				
 				foreach(var guid in guids)
 				{
 					var scenePath = AssetDatabase.GUIDToAssetPath(guid);
-					var sceneName = scenePath.Replace("Assets/02. Scene/", "").Replace(".unity", "");
+					var sceneName = scenePath.Replace("Assets/Scenes/", "").Replace(".unity", "");
 					
 					genericMenu.AddItem(new GUIContent(sceneName), false, OnClickDropdownItem, guid);
 
