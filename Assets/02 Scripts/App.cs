@@ -9,14 +9,14 @@ public enum SceneName
 
 public class App : Singleton<App>
 {
-    private ViewManager view;
-    private UIManager ui;
+    private ViewManager _view;
+    private UIManager _ui;
 
     #region Getter Setter
     public partial class Manager
     {
-        public static UIManager UI => Instance.ui;
-        public static ViewManager View => Instance.view;
+        public static ViewManager View => Instance._view;
+        public static UIManager UI => Instance._ui;
     }
 
     public partial class Data
