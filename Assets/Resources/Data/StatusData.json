@@ -1,0 +1,93 @@
+[
+  {
+    "Type": 1,
+    "Code": "Status_MaxHP",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 2,
+    "Code": "Status_HP",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 3,
+    "Code": "Status_AttackPower",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 4,
+    "Code": "Status_AttackDelay",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 5,
+    "Code": "Status_AttackDistance",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 6,
+    "Code": "Status_DefencePower",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 7,
+    "Code": "Status_MoveSpeed",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 8,
+    "Code": "Status_ViewDistance",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 9,
+    "Code": "Status_CriticalPercent",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 10,
+    "Code": "Status_Level",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 11,
+    "Code": "Status_Exp",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 12,
+    "Code": "Status_LifeSteal",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  },
+  {
+    "Type": 13,
+    "Code": "Status_AbilityHaste",
+    "BaseValue": 1,
+    "MaxValue": 1,
+    "MinValue": 1
+  }
+]
