@@ -12,6 +12,8 @@ public class App : Singleton<App>
     private ViewManager _view;
     private UIManager _ui;
 
+    private TitleData _titleData;
+
     #region Getter Setter
     public partial class Manager
     {
@@ -21,7 +23,7 @@ public class App : Singleton<App>
 
     public partial class Data
     {
-
+        public static TitleData Title = Instance._titleData;
     }
     #endregion
 
@@ -70,7 +72,7 @@ public class App : Singleton<App>
     //    return GetViewAs<TitleManager>();
     //}
 
-    public partial class View
+    public partial class Manager
     {
         //public static TitleManager Title { get => GetTitleManager(); }
     }

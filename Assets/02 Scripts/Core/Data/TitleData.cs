@@ -13,7 +13,7 @@ public class StatusData
 
 public class TitleData : Data
 {
-    public Dictionary<int, StatusData> _statusDatas = new();
+    public Dictionary<int, StatusData> StatusDatas { get; private set; }
 
     private const string _statusDataPath = "Data/StatusData";
 
@@ -26,13 +26,13 @@ public class TitleData : Data
 
     private void LoadData()
     {
-        _statusDatas.Clear();
-
         var statusDatasRaw = DataLoader.LoadData<StatusData>(_statusDataPath);
+
+        StatusDatas = new(statusDatasRaw.Length);
 
         foreach (var data in statusDatasRaw)
         {
-            _statusDatas.Add(data.Type, data);
+            StatusDatas.Add(data.Type, data);
         }
     }
 }
