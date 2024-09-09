@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +23,8 @@ public enum StatusType
 [CreateAssetMenu(fileName = "UnitStatus", menuName = "Status System/Status")]
 public class UnitStatus : ScriptableObject
 {
+    [SerializeField] private List<StatusCount> StatusList;
+
     private Dictionary<StatusType, StatusCount> _statusDictionary;
 
     public void Initialize()
@@ -33,6 +37,8 @@ public class UnitStatus : ScriptableObject
         {
             _statusDictionary[(StatusType)stat.Type] = new StatusCount(stat);
         }
+
+        StatusList = _statusDictionary.Values.ToList();
     }
 
     public StatusCount GetStatus(StatusType type)
