@@ -12,4 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b47f46bab548a408eb2b598800b34a, type: 3}
   m_Name: UnitStatus
   m_EditorClassIdentifier: 
-  StatusList: []
+  StatusList:
+  - _valueType: 1
+    _currentValue: 1
+  - _valueType: 2
+    _currentValue: 1
+  - _valueType: 3
+    _currentValue: 1
+  - _valueType: 4
+    _currentValue: 1
+  - _valueType: 5
+    _currentValue: 1
+  - _valueType: 6
+    _currentValue: 1
+  - _valueType: 7
+    _currentValue: 1
+  - _valueType: 8
+    _currentValue: 1
+  - _valueType: 9
+    _currentValue: 1
+  - _valueType: 10
+    _currentValue: 1
+  - _valueType: 11
+    _currentValue: 1
+  - _valueType: 12
+    _currentValue: 1
+  - _valueType: 13
+    _currentValue: 1

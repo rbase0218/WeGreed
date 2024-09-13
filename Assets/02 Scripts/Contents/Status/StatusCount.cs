@@ -8,8 +8,7 @@ public class StatusCount
 
     private StatusData _data;
 
-    [SerializeField] private StatusType _valueType;
-    [SerializeField] private float _currentValue;
+    private float _currentValue;
 
     public float Value
     {
@@ -27,7 +26,6 @@ public class StatusCount
     {
         _data = data;
 
-        _valueType = (StatusType)data.Type;
         _currentValue = data.BaseValue;
     }
 
