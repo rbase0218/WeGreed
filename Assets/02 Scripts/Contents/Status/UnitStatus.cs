@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,6 +24,8 @@ public enum StatusType
 public class UnitStatus : ScriptableObject
 {
     private Dictionary<StatusType, StatusCount> _statusDictionary;
+
+    public IReadOnlyDictionary<StatusType, StatusCount> StatusDictionary => _statusDictionary;
 
     public void Initialize()
     {

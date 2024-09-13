@@ -9,7 +9,18 @@ public class StatusCount
     private StatusData _data;
 
     private float _currentValue;
-    public float Value => _currentValue;
+
+    public float Value
+    {
+        get => _currentValue;
+
+        set
+        {
+            _currentValue = Mathf.Clamp(value, _data.MinValue, _data.MaxValue);
+
+            OnValueChanged?.Invoke(_currentValue);
+        }
+    }
 
     public StatusCount(StatusData data)
     {
@@ -20,26 +31,16 @@ public class StatusCount
 
     public void AddValue(float value)
     {
-        _currentValue += value;
-
-        _currentValue = Mathf.Clamp(_currentValue, _data.MinValue, _data.MaxValue);
-
-        OnValueChanged?.Invoke(_currentValue);
+        Value += value;
     }
 
     public void MulValue(float value)
     {
-        _currentValue *= value;
-
-        _currentValue = Mathf.Clamp(_currentValue, _data.MinValue, _data.MaxValue);
-
-        OnValueChanged?.Invoke(_currentValue);
+        Value *= value;
     }
 
     public void Reset()
     {
-        _currentValue = _data.BaseValue;
-
-        OnValueChanged?.Invoke(_currentValue);
+        Value = _data.BaseValue;
     }
 }
