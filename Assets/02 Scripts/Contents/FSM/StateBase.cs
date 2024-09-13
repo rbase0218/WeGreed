@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class StateBase<T> : IState where T : MonoBehaviour
+public abstract class StateBase<T> where T : MonoBehaviour
 {
     protected readonly T _owner;
 
